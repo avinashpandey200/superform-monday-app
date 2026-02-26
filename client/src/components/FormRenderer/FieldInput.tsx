@@ -142,7 +142,7 @@ const FieldInput: React.FC<Props> = ({ field, value, onChange, primaryColor }) =
       return (
         <select style={base} value={value} onChange={(e) => onChange(e.target.value)}>
           <option value="">-- Select Timezone --</option>
-          {Intl.supportedValuesOf("timeZone").map((tz) => (
+          {(Intl as unknown as { supportedValuesOf: (key: string) => string[] }).supportedValuesOf("timeZone").map((tz: string) => (
             <option key={tz} value={tz}>{tz}</option>
           ))}
         </select>

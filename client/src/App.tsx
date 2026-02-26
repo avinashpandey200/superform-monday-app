@@ -4,6 +4,7 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import FormBuilder from "./components/FormBuilder/FormBuilder";
 import FormRenderer from "./components/FormRenderer/FormRenderer";
 import Submissions from "./components/Dashboard/Submissions";
+import TrustedBusinessDemo from "./components/TrustedBusiness/TrustedBusinessDemo";
 import { Form } from "./types";
 import { createForm, getForm, updateForm } from "./api";
 import { v4 as uuidv4 } from "uuid";
@@ -130,6 +131,7 @@ const App: React.FC = () => (
       <Route path="/builder/:formId" element={<BuilderPage />} />
       <Route path="/form/:formId" element={<FormPage />} />
       <Route path="/submissions/:formId" element={<SubmissionsPage />} />
+      <Route path="/trusted-badge" element={<TrustedBusinessDemo />} />
     </Routes>
   </BrowserRouter>
 );
